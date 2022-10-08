@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, handleRemoveToCart}) => {
     return (
         <div>
             <h3>Order summary: {cart.length} </h3>
@@ -10,7 +10,7 @@ const Cart = ({cart}) => {
                 >
 
                     {tshirt.name}
-                    <button>X</button>
+                    <button onClick={() => handleRemoveToCart(tshirt)}>X</button>
                 </p>)
             }
         </div>
